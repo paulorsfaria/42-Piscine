@@ -3,13 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_ultimate_div_mod.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: paulo-do <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: paulo-do <paulo-do@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/30 18:19:20 by paulo-do          #+#    #+#             */
-/*   Updated: 2023/09/03 16:18:53 by paulo-do         ###   ########.fr       */
+/*   Updated: 2023/09/06 08:30:42 by paulo-do         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdio.h>
+
+//#include <stdio.h>
+#include <unistd.h>
 
 void	ft_ultimate_div_mod(int *a, int *b)
 {

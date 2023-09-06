@@ -3,37 +3,46 @@
 /*                                                        :::      ::::::::   */
 /*   ft_rev_int_tab.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: paulo-do <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: paulo-do <paulo-do@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/29 16:35:58 by paulo-do          #+#    #+#             */
-/*   Updated: 2023/09/03 16:23:51 by paulo-do         ###   ########.fr       */
+/*   Updated: 2023/09/05 10:42:08 by paulo-do         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
-
-void	ft_rev_into_tab(int *tab)
+//#include <stdio.h>
+void	ft_rev_int_tab(int *tab, int size)
 {
-	int	temp;
+	int	temp[30];
 	int	i;
 
 	i = 0;
-	while (tab[i] != '\0')
+	size--;
+	while (size >= 0)
 	{
-		if (tab[i] < tab[i +1])
-		{
-			temp = tab[i];
-			tab[i] = tab[i + 1];
-			tab[i + 1] = temp;
-		}
+		temp[i] = tab[size];
+		size--;
 		i++;
+	}
+	i--;
+	while (i >= 0)
+	{
+		tab[i] = temp[i];
+		i--;
 	}
 }
 /*
 int	main(void)
 {
-int test;
-	char	tab[] = {'9', '8', '7', '6', '5', '4', '3', '2', '1'};
-test = *tab;
-	ft_rev_into_tab(test);
-}*/
+	int tab[10] = {6, 5, 4, 3, 2, 1};
+	int size = 6;
+	int i = 0;
+	ft_rev_int_tab(tab, size);
+	while (tab[i] != '\0')
+	{
+		printf("%d", tab[i]);
+		i++;
+	}
+}
+*/

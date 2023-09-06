@@ -1,43 +1,49 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcat.c                                        :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: paulo-do <paulo-do@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/04 08:06:14 by paulo-do          #+#    #+#             */
-/*   Updated: 2023/09/06 11:47:56 by paulo-do         ###   ########.fr       */
+/*   Created: 2023/09/05 07:20:52 by paulo-do          #+#    #+#             */
+/*   Updated: 2023/09/05 07:32:59 by paulo-do         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <stdio.h>
+#include <unistd.h>
+#include <stdio.h>
 
-char *ft_strcat(char *dest, char *src)
+int ft_atoi(char *str)
 {
     int i;
-    int j;
+    int sinal;
+    int final;
 
-    j = 0;
     i = 0;
-    while (dest[j] != '\0')
+    sinal = 1;
+    final = 0;
+    while ((str[i] >= 9 && str[i] <= 13) || str[i] == ' ')
     {
-        j++;
-    }
-    
-    while (src[i] != '\0')
-    {
-        dest[j] = src [i];
         i++;
-        j++;
     }
-    dest[j] = '\0';
-    return (dest);
+    while (str[i] == '-' || str[i] == '+')
+    {
+        if (str[i] == '-')
+            sinal = sinal * -1;
+        i++;
+    }
+    while (str[i] >= '0' && str[i] <= '9')
+    {
+        final = (final * 10) + (str[i] - '0');
+        i++;
+    }
+    return (final * sinal);
 }
-/*
+
 int main(int argc, char **argv)
 {
     (void)argc;
-    ft_strcat(argv[1], argv[2]);
     
-    printf("%s", argv[1]);
-}*/
+    printf("%d", ft_atoi(argv[1]));
+    return 0;
+}

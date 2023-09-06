@@ -5,28 +5,9 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: paulo-do <paulo-do@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/30 18:28:30 by paulo-do          #+#    #+#             */
-/*   Updated: 2023/09/06 08:30:46 by paulo-do         ###   ########.fr       */
+/*   Created: 2023/09/06 12:13:42 by paulo-do          #+#    #+#             */
+/*   Updated: 2023/09/06 12:13:59 by paulo-do         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
-
-void	ft_putstr(char *str)
-{
-	int	i;
-
-	i = 0;
-	while (str[i] != '\0')
-	{
-		write(1, &str[i], 1);
-		i++;
-	}
-}
-/*
-int	main()
-{
-	char str[] = {"meh meh meh"};
-	ft_putstr(&str[0]);
-}
-*/

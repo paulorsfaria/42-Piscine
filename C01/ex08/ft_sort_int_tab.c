@@ -1,32 +1,48 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_sort_int_tab.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: paulo-do <paulo-do@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/30 18:28:30 by paulo-do          #+#    #+#             */
-/*   Updated: 2023/09/06 08:30:46 by paulo-do         ###   ########.fr       */
+/*   Created: 2023/09/05 11:03:19 by paulo-do          #+#    #+#             */
+/*   Updated: 2023/09/06 07:11:14 by paulo-do         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
-
-void	ft_putstr(char *str)
+//#include <stdio.h>
+void	ft_rev_int_tab(int *tab, int size)
 {
-	int	i;
+	int i;
+	int swap;
+	int	j;
 
+	j = 0;
 	i = 0;
-	while (str[i] != '\0')
+	while(tab[i] != '\0')
 	{
-		write(1, &str[i], 1);
+			while (tab[i] < tab[j])
+			{
+				swap = tab[j];
+				tab[j] = tab[i];
+				tab[i] = swap;
+				j++;
+			}
+
+		j = i;
 		i++;
 	}
 }
-/*
-int	main()
+/*int	main(void)
 {
-	char str[] = {"meh meh meh"};
-	ft_putstr(&str[0]);
-}
-*/
+	int tab[10] = {1, 6, 2, 4, 3, 5, 7, 8, 9};
+	int size = 9;
+	int i = 0;
+	ft_rev_int_tab(tab, size);
+	while (tab[i] != '\0')
+	{
+		printf("%d", tab[i]);
+		i++;
+	}
+}*/

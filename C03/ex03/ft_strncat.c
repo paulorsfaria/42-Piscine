@@ -6,13 +6,13 @@
 /*   By: paulo-do <paulo-do@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/04 08:28:54 by paulo-do          #+#    #+#             */
-/*   Updated: 2023/09/04 12:44:06 by paulo-do         ###   ########.fr       */
+/*   Updated: 2023/09/06 12:12:39 by paulo-do         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
-#include <stdio.h>
-#include <stdlib.h>
+//#include <stdio.h>
+//#include <stdlib.h>
 char *ft_strncat(char *dest, char *src, unsigned int nb)
 {
     unsigned int i;
@@ -35,11 +35,11 @@ char *ft_strncat(char *dest, char *src, unsigned int nb)
     return (dest);
     
 }
-
+/*
 int main(int argc, char **argv)
 {
     (void)argc;
     ft_strncat(argv[1], argv[2], atoi(argv[3]));
     
     printf("%s", argv[1]);
-}
+}*/

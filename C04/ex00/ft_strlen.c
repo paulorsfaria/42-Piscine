@@ -1,43 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcat.c                                        :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: paulo-do <paulo-do@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/04 08:06:14 by paulo-do          #+#    #+#             */
-/*   Updated: 2023/09/06 11:47:56 by paulo-do         ###   ########.fr       */
+/*   Created: 2023/09/06 11:58:15 by paulo-do          #+#    #+#             */
+/*   Updated: 2023/09/06 12:12:11 by paulo-do         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 //#include <stdio.h>
+#include <unistd.h>
 
-char *ft_strcat(char *dest, char *src)
+int	ft_strlen(char *str)
 {
-    int i;
-    int j;
+	int	i;
 
-    j = 0;
-    i = 0;
-    while (dest[j] != '\0')
-    {
-        j++;
-    }
-    
-    while (src[i] != '\0')
-    {
-        dest[j] = src [i];
-        i++;
-        j++;
-    }
-    dest[j] = '\0';
-    return (dest);
+	i = 0;
+	while (str[i] != '\0')
+		i++;
+	return (i);
 }
 /*
 int main(int argc, char **argv)
 {
-    (void)argc;
-    ft_strcat(argv[1], argv[2]);
-    
-    printf("%s", argv[1]);
+    if(argc == 1)
+    {
+        return (0);
+    }
+    printf("%d", ft_strlen(argv[1]));
 }*/
