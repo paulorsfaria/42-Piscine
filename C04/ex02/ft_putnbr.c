@@ -6,7 +6,7 @@
 /*   By: paulo-do <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/06 12:33:16 by paulo-do          #+#    #+#             */
-/*   Updated: 2023/09/06 16:54:19 by paulo-do         ###   ########.fr       */
+/*   Updated: 2023/09/07 09:06:18 by paulo-do         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@ void	ft_putchar(char c)
 
 void	ft_putnbr(int nb)
 {
-	while(nb > 10){
 	if (nb < 0)
 	{
 		ft_putchar('-');
@@ -27,14 +26,14 @@ void	ft_putnbr(int nb)
 	}
 	if (nb >= 10)
 	{
-		ft_putchar(nb % 10);
-		nb = nb / 10; 
+		ft_putnbr(nb / 10);
+		nb = nb % 10; 
 	}
 	if (nb < 10)
 		ft_putchar(nb + 48);
-}}
+}
 
 int	main(void)
 {
-	ft_putnbr(-42);
+	ft_putnbr(-4655472);
 }
