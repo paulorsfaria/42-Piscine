@@ -23,11 +23,11 @@ void	ft_putstr(char *str)
 		i++;
 	}
 }
-
+/*
 int	main(int argc, char **argv)
 {
 	if (argc == 1)
 		return (0);
 	
 	ft_putstr(argv[1]);
-}
+}*/
