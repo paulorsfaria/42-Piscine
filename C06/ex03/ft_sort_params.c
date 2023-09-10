@@ -6,7 +6,7 @@
 /*   By: paulo-do <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/10 09:20:16 by paulo-do          #+#    #+#             */
-/*   Updated: 2023/09/10 15:41:52 by paulo-do         ###   ########.fr       */
+/*   Updated: 2023/09/10 15:49:26 by paulo-do         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ int	ft_strcmp(char *s1, char *s2)
 
 void	ft_swap(char *str1, char *str2)
 {
-	char	*temp;
+	char	temp;
 
 	temp = *str2;
 	*str2 = *str1;
