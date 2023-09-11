@@ -37,8 +37,8 @@ int	ft_iterative_factorial(int nb)
 			total = total * i;
 			i++;
 		}
-		return (total);
 	}
+	return (total);
 }
 /*
 int main(int argc, char **argv)
