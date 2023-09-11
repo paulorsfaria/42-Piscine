@@ -6,25 +6,28 @@
 /*   By: paulo-do <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/09 20:35:31 by paulo-do          #+#    #+#             */
-/*   Updated: 2023/09/09 20:45:08 by paulo-do         ###   ########.fr       */
+/*   Updated: 2023/09/11 07:53:38 by paulo-do         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include <stdio.h>
+
 int	ft_sqrt(int nb)
 {
 	int	i;
 
 	i = 0;
-	while((i * i) != nb && i <(nb / 2))
+	while ((i * i) != nb && i < (nb / 2))
 	{
 		i++;
 	}
-	if((i * i) == nb)
-		return(i);
+	if ((i * i) == nb)
+		return (i);
 	else
-		return(0);
+		return (0);
 }
+/*
 int	main()
 {
 	printf("%d", ft_sqrt(257));
-}
+}*/
