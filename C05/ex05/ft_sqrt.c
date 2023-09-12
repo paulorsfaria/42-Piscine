@@ -30,8 +30,8 @@ int	ft_sqrt(int nb)
 	else
 		return (0);
 }
-
+/*
 int	main()
 {
 	printf("%d", ft_sqrt(1));
-}
+}*/

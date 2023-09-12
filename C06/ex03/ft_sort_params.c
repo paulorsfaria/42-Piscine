@@ -37,9 +37,9 @@ int	ft_strcmp(char *s1, char *s2)
 	return (s1[i] - s2[i]);
 }
 
-void	ft_swap(char *str1, char *str2)
+void	ft_swap(char **str1, char **str2)
 {
-	char	temp;
+	char	*temp;
 
 	temp = *str2;
 	*str2 = *str1;
@@ -59,7 +59,7 @@ int	main(int argc, char **argv)
 		{
 			if (ft_strcmp(argv[i], argv[i + 1]) > 0)
 			{
-				ft_swap(argv[i], argv[i + 1]);
+				ft_swap(&argv[i], &argv[i + 1]);
 			}
 			i++;
 		}

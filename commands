@@ -1,0 +1,33 @@
+mkdir make folder // mkdir name
+cat > make file  
+touch change date  -h to not change the original in a shortcut   //touch -h -t 20230601220 test6
+chmod  777 file name  change permisions 
+
+
+For getting short hash eg. fb8a7de
+git log -n1 --format="%h"
+
+For getting full hash eg. fb8a7decf471abc61dc6e49616697d3bd722b96f
+git log -n1 --format="%H"
+
+
+git rm -r Shell\ 00/ex02/test5 remove files
+git ls-files   list
+
+touch create file
+vim edit file
+
+
+ls -tpm
+
+t- sort by modification time, newest first
+
+p- --indicator-style=slash
+
+m-fill width with a comma separated list of entries
+tar -xvf exo2.tar 
+ln 
+ -r, --relative create symbolic links relative to link location
+ 
+-s, --symbolic make symbolic links instead of hard links
+
